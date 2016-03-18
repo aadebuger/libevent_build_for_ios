@@ -22,7 +22,7 @@
 ###########################################################################
 # Choose your libevent version and your currently-installed iOS SDK version:
 #
-VERSION="2.0.21-stable"
+VERSION="2.0.22-stable"
 USERSDKVERSION="8.1"
 MINIOSVERSION="6.1"
 VERIFYGPG=true
@@ -84,7 +84,8 @@ set -e
 
 if [ ! -e "${SRCDIR}/libevent-${VERSION}.tar.gz" ]; then
 echo "Downloading libevent-${VERSION}.tar.gz"
-curl -LO https://github.com/downloads/libevent/libevent/libevent-${VERSION}.tar.gz
+#curl -LO https://github.com/downloads/libevent/libevent/libevent-${VERSION}.tar.gz
+curl -LO https://github.com/libevent/libevent/releases/download/release-${VERSION}.tar.gz
 fi
 echo "Using libevent-${VERSION}.tar.gz"
 
